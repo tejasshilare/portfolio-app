@@ -1,0 +1,18 @@
+<section id="skills" class="max-w-4xl mx-auto px-6 py-12 mb-12 scroll-mt-20">
+    <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-300">Technical Skills</h3>
+    <div class="space-y-8">
+        @for (skillGroup of portfolio().skills; track skillGroup.category) {
+        <div class="skill-card bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-gray-400 transition">
+            <h4 class="text-xl font-semibold mb-4 text-gray-900">{{ skillGroup.category }}</h4>
+            <div class="flex flex-wrap gap-2">
+                @for (skill of skillGroup.items; track skill) {
+                <span
+                    class="skill-tag px-3 py-1 bg-gray-300 rounded-full text-sm hover:bg-gray-700 hover:text-white transition cursor-pointer text-gray-800">
+                    {{ skill }}
+                </span>
+                }
+            </div>
+        </div>
+        }
+    </div>
+</section>

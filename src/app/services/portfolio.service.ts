@@ -50,28 +50,28 @@ export class PortfolioService {
     summary: 'Full-stack developer with experience building responsive and scalable web applications using Angular, React, .NET and MERN stack. Skilled in developing modern UIs, integrating REST APIs, and delivering end-to-end web solutions. Experienced in agile development and version control with Git. Open to freelance and remote opportunities.',
     skills: [
       {
-        category: 'Frontend',
-        items: ['Angular', 'React.js', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap']
+        category: 'Full Stack Development',
+        items: ['.NET Full Stack Development', 'MERN Stack']
       },
       {
-        category: 'MERN Stack',
-        items: ['MongoDB', 'Express.js', 'React.js', 'Node.js']
+        category: 'Backend Development',
+        items: ['ASP.NET', '.NET Core', 'MVC Architecture', 'C#', 'Java', 'C', 'C++', 'Entity Framework Core', 'RESTful APIs', 'JWT Authentication', 'IdentityServer4', 'Node.js', 'Express.js', 'REST API Development', 'API Integration', 'Backend Logic']
       },
       {
-        category: 'Backend',
-        items: ['Node.js', 'REST API development']
+        category: 'Frontend Development',
+        items: ['Angular', 'React.js', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Responsive Design']
       },
       {
-        category: 'Database',
-        items: ['MongoDB', 'SQL Server']
+        category: 'Database Management',
+        items: ['SQL Server', 'MongoDB', 'Entity Framework Core', 'Optimized Queries', 'Stored Procedures', 'Triggers', 'Database Design', 'Data Operations']
       },
       {
-        category: 'Tools',
-        items: ['Git', 'GitHub', 'VS Code']
+        category: 'Cloud',
+        items: ['Microsoft Azure', 'Azure App Service', 'Azure SQL Database']
       },
       {
-        category: 'Other',
-        items: ['Responsive design', 'API integration', 'authentication (JWT)', 'deployment basics']
+        category: 'Tools & IDEs',
+        items: ['Visual Studio', 'VS Code', 'Git', 'GitHub']
       }
     ],
     experience: [

@@ -1,167 +1,26 @@
-<div class="min-h-screen bg-white text-gray-900">
-    <!-- Navigation Bar -->
-    <nav class="border-b border-gray-200 bg-white/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
-            <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                {{ portfolio().personalInfo.name }}
-            </h1>
-            <div class="hidden md:flex gap-6">
-                <a href="#about" class="hover:text-blue-600 transition">About</a>
-                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-                <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
-                <a href="#certifications" class="hover:text-blue-600 transition">Certifications</a>
-            </div>
-        </div>
-    </nav>
+﻿<div class="min-h-screen bg-white text-gray-900">
+    <!-- Header Component (Navigation + Profile) -->
+    <app-header></app-header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
-        <!-- Header Section -->
-        <section class="mb-12">
-            <div class="flex flex-col md:flex-row items-center gap-10 mb-8">
-                <!-- Profile Photo -->
-                <div class="flex-shrink-0">
-                    <div
-                        class="w-40 h-40 rounded-full overflow-hidden border-4 border-blue-600/50 shadow-lg hover:shadow-2xl transition">
-                        @if (portfolio().personalInfo.photo) {
-                        <img [src]="portfolio().personalInfo.photo" [alt]="portfolio().personalInfo.name"
-                            class="w-full h-full object-cover" />
-                        } @else {
-                        <div
-                            class="w-full h-full bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-white text-5xl font-bold">
-                            {{ portfolio().personalInfo.name.charAt(0) }}
-                        </div>
-                        }
-                    </div>
-                </div>
+    <main class="max-w-4xl mx-auto">
+        <!-- About Component -->
+        <app-about></app-about>
 
-                <!-- Name and Info -->
-                <div class="text-center md:text-left flex-1">
-                    <h2
-                        class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
-                        {{ portfolio().personalInfo.name }}
-                    </h2>
-                    <p class="text-gray-600 text-lg mb-6">{{ portfolio().personalInfo.location }}</p>
+        <!-- Skills Component -->
+        <app-skills></app-skills>
 
-                    <!-- Contact Info -->
-                    <div class="flex flex-wrap justify-center md:justify-start gap-6 mb-6 text-gray-700">
-                        <a [href]="getEmailLink()" class="hover:text-blue-600 transition flex items-center gap-2">
-                            <span class="text-blue-600">✉</span> {{ portfolio().personalInfo.email }}
-                        </a>
-                        <a [href]="getPhoneLink()" class="hover:text-blue-600 transition flex items-center gap-2">
-                            <span class="text-blue-600">📱</span> {{ portfolio().personalInfo.phone }}
-                        </a>
-                    </div>
+        <!-- Experience Component -->
+        <app-experience></app-experience>
 
-                    <!-- Social Links -->
-                    <div class="flex justify-center md:justify-start gap-6 mb-8">
-                        <a [href]="getLinkedInUrl()" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition transform hover:scale-105">
-                            <span>LinkedIn</span>
-                        </a>
-                        <a [href]="getGitHubUrl()" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition transform hover:scale-105">
-                            <span>GitHub</span>
-                        </a>
-                    </div>
+        <!-- Certifications Component -->
+        <app-certifications></app-certifications>
 
-                    <a href="#"
-                        class="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 rounded-lg font-semibold transition transform hover:scale-105">
-                        Download Resume
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Professional Summary -->
-        <section id="about" class="mb-12 scroll-mt-20">
-            <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-blue-600/30">Professional Summary</h3>
-            <p class="text-gray-700 leading-relaxed text-lg">
-                {{ portfolio().summary }}
-            </p>
-        </section>
-
-        <!-- Technical Skills -->
-        <section id="skills" class="mb-12 scroll-mt-20">
-            <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-blue-600/30">Technical Skills</h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                @for (skillGroup of portfolio().skills; track skillGroup.category) {
-                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-600/50 transition">
-                    <h4 class="text-xl font-semibold mb-4 text-blue-600">{{ skillGroup.category }}</h4>
-                    <div class="flex flex-wrap gap-2">
-                        @for (skill of skillGroup.items; track skill) {
-                        <span
-                            class="px-3 py-1 bg-gray-200 rounded-full text-sm hover:bg-blue-600 transition cursor-pointer text-gray-800">
-                            {{ skill }}
-                        </span>
-                        }
-                    </div>
-                </div>
-                }
-            </div>
-        </section>
-
-        <!-- Work Experience -->
-        <section id="experience" class="mb-12 scroll-mt-20">
-            <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-blue-600/30">Work Experience</h3>
-            <div class="space-y-8">
-                @for (job of portfolio().experience; track job.company + job.period) {
-                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200 hover:border-blue-600/50 transition">
-                    <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                        <div>
-                            <h4 class="text-2xl font-bold text-blue-600">{{ job.title }}</h4>
-                            <p class="text-cyan-600 text-lg">{{ job.company }}</p>
-                        </div>
-                        <span class="text-gray-600 mt-2 md:mt-0">{{ job.period }}</span>
-                    </div>
-                    <ul class="space-y-2 text-gray-700">
-                        @for (achievement of job.achievements; track achievement) {
-                        <li class="flex items-start gap-3">
-                            <span class="text-cyan-600 font-bold mt-1">•</span>
-                            <span>{{ achievement }}</span>
-                        </li>
-                        }
-                    </ul>
-                </div>
-                }
-            </div>
-        </section>
-
-        <!-- Certifications -->
-        <section id="certifications" class="mb-12 scroll-mt-20">
-            <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-blue-600/30">Certifications</h3>
-            <div class="space-y-4">
-                @for (cert of portfolio().certifications; track cert.title) {
-                @if (cert.url) {
-                <a [href]="cert.url" target="_blank" rel="noopener noreferrer"
-                    class="flex items-start gap-3 bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-600 hover:bg-blue-50 transition cursor-pointer block">
-                    <span class="text-green-600 font-bold text-xl mt-1">✓</span>
-                    <span class="text-gray-700">{{ cert.title }}</span>
-                </a>
-                } @else {
-                <div
-                    class="flex items-start gap-3 bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-blue-600/50 transition">
-                    <span class="text-green-600 font-bold text-xl mt-1">✓</span>
-                    <span class="text-gray-700">{{ cert.title }}</span>
-                </div>
-                }
-                }
-            </div>
-        </section>
-
-        <!-- Education -->
-        <section class="mb-12">
-            <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-blue-600/30">Education</h3>
-            <div
-                class="bg-gradient-to-r from-blue-100 to-cyan-100 rounded-lg p-6 border border-blue-300 hover:border-blue-400 transition">
-                <h4 class="text-2xl font-bold text-blue-600 mb-2">{{ portfolio().education.degree }}</h4>
-                <p class="text-cyan-600 text-lg mb-2">{{ portfolio().education.institution }}</p>
-                <p class="text-gray-600">Graduated: {{ portfolio().education.year }}</p>
-            </div>
-        </section>
+        <!-- Education Component -->
+        <app-education></app-education>
 
         <!-- Footer -->
-        <footer class="border-t border-gray-200 pt-8 mt-12 text-center text-gray-600">
-            <p>© 2024 {{ portfolio().personalInfo.name }}. All rights reserved.</p>
+        <footer class="max-w-4xl mx-auto px-6 border-t border-gray-200 pt-8 mt-12 mb-12 text-center text-gray-600">
+            <p>© 2024 Tejas Shilare. All rights reserved.</p>
             <p class="mt-2">Built with Angular & Tailwind CSS</p>
         </footer>
     </main>

@@ -1,0 +1,20 @@
+<section id="certifications" class="max-w-4xl mx-auto px-6 py-12 mb-12 scroll-mt-20">
+    <h3 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-300">Certifications</h3>
+    <div class="space-y-4">
+        @for (cert of portfolio().certifications; track cert.title) {
+        @if (cert.url) {
+        <a [href]="cert.url" target="_blank" rel="noopener noreferrer"
+            class="cert-item flex items-start gap-3 bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-gray-400 hover:bg-gray-100 transition cursor-pointer block">
+            <span class="text-gray-900 font-bold text-xl mt-1">✓</span>
+            <span class="text-gray-700">{{ cert.title }}</span>
+        </a>
+        } @else {
+        <div
+            class="cert-item flex items-start gap-3 bg-gray-50 rounded-lg p-4 border border-gray-200 hover:border-gray-400 transition">
+            <span class="text-gray-900 font-bold text-xl mt-1">✓</span>
+            <span class="text-gray-700">{{ cert.title }}</span>
+        </div>
+        }
+        }
+    </div>
+</section>
