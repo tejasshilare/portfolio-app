@@ -28,4 +28,9 @@ export class Header {
   getPhoneLink(): string {
     return `tel:${this.portfolio().personalInfo.phone.replace(/\s/g, '')}`;
   }
+
+  getPortfolioUrl(): string {
+    const portfolio = this.portfolio().personalInfo.portfolio;
+    return portfolio ? `https://${portfolio}` : '';
+  }
 }
