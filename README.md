@@ -2,6 +2,12 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.1.
 
+## Portfolio
+
+Live portfolio: https://tejasshilare-portfolio-app.vercel.app
+
+The portfolio now includes updated professional information, a dedicated projects section, and a place to add featured work as it becomes available.
+
 ## Development server
 
 To start a local development server, run:

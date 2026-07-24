@@ -1,0 +1,36 @@
+<section id="projects" class="max-w-4xl mx-auto px-6 py-12 mb-12 scroll-mt-20">
+    <div class="bg-white/80 backdrop-blur rounded-2xl p-8 shadow-lg border border-gray-200">
+        <h3 class="text-3xl font-bold mb-6 pb-3 border-b-2 border-green-500 text-gray-800">
+            <span class="text-green-600">▸</span> Projects
+        </h3>
+
+        @if (portfolio().projects.length) {
+        <div class="space-y-6">
+            @for (project of portfolio().projects; track project.title) {
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-5">
+                <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
+                    <div>
+                        <h4 class="text-xl font-semibold text-gray-900">{{ project.title }}</h4>
+                        <p class="text-gray-700 mt-2">{{ project.description }}</p>
+                    </div>
+                    @if (project.link) {
+                    <a [href]="project.link" target="_blank" rel="noopener noreferrer"
+                        class="text-sm font-medium text-green-700 hover:text-green-900">View Project →</a>
+                    }
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    @for (technology of project.technologies; track technology) {
+                    <span class="px-3 py-1 rounded-full bg-gray-700 text-sm text-white">{{ technology }}</span>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+        } @else {
+        <div class="rounded-xl border border-dashed border-gray-300 bg-gray-50 p-8 text-center text-gray-600">
+            <p class="text-lg font-medium">Projects section is ready for your featured work.</p>
+            <p class="mt-2">Add your latest projects to the portfolio data to showcase them here.</p>
+        </div>
+        }
+    </div>
+</section>

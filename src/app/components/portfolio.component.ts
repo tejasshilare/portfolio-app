@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Header } from './header/header';
 import { About } from './about/about';
 import { Skills } from './skills/skills';
+import { ProjectsComponent } from './projects/projects.component';
 import { Experience } from './experience/experience';
 import { Certifications } from './certifications/certifications';
 import { Education } from './education/education';
@@ -15,6 +16,7 @@ import { Education } from './education/education';
     Header,
     About,
     Skills,
+    ProjectsComponent,
     Experience,
     Certifications,
     Education
