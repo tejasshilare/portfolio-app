@@ -35,6 +35,10 @@ nav {
   animation: fadeInDown 0.6s ease-out;
 }
 
+aside {
+  animation: slideInUp 0.8s ease-out;
+}
+
 section {
   animation: slideInUp 0.8s ease-out;
 }

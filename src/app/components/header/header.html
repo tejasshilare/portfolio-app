@@ -14,13 +14,27 @@
     </div>
 </nav>
 
-<section class="max-w-4xl mx-auto px-6 py-12 mb-12">
+<aside
+    class="hidden lg:flex fixed left-6 top-24 bottom-24 w-52 flex-col gap-3 rounded-2xl border border-[#9DB2BF] bg-[#DDE6ED] p-4 shadow-lg shadow-[#526D82]/10 z-40">
+    <a href="#about"
+        class="rounded-xl px-3 py-2 text-sm font-medium text-[#27374D] transition hover:bg-[#9DB2BF] hover:text-[#27374D]">About</a>
+    <a href="#skills"
+        class="rounded-xl px-3 py-2 text-sm font-medium text-[#27374D] transition hover:bg-[#9DB2BF] hover:text-[#27374D]">Skills</a>
+    <a href="#projects"
+        class="rounded-xl px-3 py-2 text-sm font-medium text-[#27374D] transition hover:bg-[#9DB2BF] hover:text-[#27374D]">Projects</a>
+    <a href="#experience"
+        class="rounded-xl px-3 py-2 text-sm font-medium text-[#27374D] transition hover:bg-[#9DB2BF] hover:text-[#27374D]">Experience</a>
+    <a href="#certifications"
+        class="rounded-xl px-3 py-2 text-sm font-medium text-[#27374D] transition hover:bg-[#9DB2BF] hover:text-[#27374D]">Certifications</a>
+</aside>
+
+<section class="max-w-4xl mx-auto px-16 py-12 mb-12">
     <!-- Gradient Background -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 -z-10 h-full w-full"></div>
+    <div class="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 -z-10 h-full w-full"></div>
 
     <div class="flex flex-col md:flex-row items-center gap-10 mb-8">
         <!-- Profile Photo -->
-        <div class="flex-shrink-0 profile-photo">
+        <div class="shrink-0 profile-photo">
             <div
                 class="w-40 h-40 rounded-full overflow-hidden border-4 border-black/30 shadow-lg hover:shadow-2xl transition">
                 @if (portfolio().personalInfo.photo) {
@@ -28,7 +42,7 @@
                     class="w-full h-full object-cover" />
                 } @else {
                 <div
-                    class="w-full h-full bg-gradient-to-br from-gray-900 to-gray-700 flex items-center justify-center text-white text-5xl font-bold">
+                    class="w-full h-full bg-linear-to-br from-gray-900 to-gray-700 flex items-center justify-center text-white text-5xl font-bold">
                     {{ portfolio().personalInfo.name.charAt(0) }}
                 </div>
                 }

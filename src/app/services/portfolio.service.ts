@@ -55,65 +55,75 @@ export class PortfolioService {
       portfolio: 'tejasshilare-portfolio-app.vercel.app',
       photo: 'assets/profile.jpeg'
     },
-    summary: 'Full-Stack Software Developer and AI Trainer with over two years of professional experience spanning enterprise software development, backend engineering, frontend development, AI model evaluation, and technical problem solving. I enjoy building scalable systems, writing clean code, and improving AI systems through structured evaluation methodologies.',
+    summary: 'Full-Stack Developer, Software Engineer, and AI Trainer with 2+ years of professional experience spanning enterprise software development, full-stack web application development, cloud technologies, and AI/LLM evaluation. Experienced in designing and developing production-oriented applications across the frontend, backend, database, and deployment layers. Strong hands-on experience with C#, .NET, ASP.NET Core, JavaScript, TypeScript, React, Angular, Node.js, Express.js, SQL Server, MongoDB, PostgreSQL, and Microsoft Azure.',
     skills: [
       {
-        category: 'Backend Development',
-        items: ['ASP.NET', '.NET Core', 'REST API Development', 'API Integration', 'Authentication', 'Authorization', 'CRUD Operations', 'Service Layer Design', 'SQL Query Optimization']
+        category: 'Software Engineering',
+        items: ['Full-Stack Web Development', 'Backend Development', 'Frontend Development', 'REST API Development', 'API Integration', 'Enterprise Application Development', 'Object-Oriented Programming', 'Modular Architecture', 'Database Design', 'Authentication & Authorization', 'Debugging & Troubleshooting', 'Performance Optimization', 'Software Testing', 'Code Review', 'SDLC']
       },
       {
-        category: 'Frontend Development',
-        items: ['Angular', 'React', 'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'Responsive Design', 'Bootstrap', 'Tailwind CSS', 'Component-Based Development', 'UI Optimization']
+        category: 'AI & Machine Learning',
+        items: ['LLM Evaluation', 'Prompt Engineering', 'Instruction Tuning', 'Response Ranking', 'Rubric-Based Evaluation', 'Programmatic Reasoning', 'Algorithmic Analysis', 'Chain-of-Thought Evaluation', 'Adversarial Testing', 'Edge-Case Analysis', 'Factuality Evaluation', 'Hallucination Detection', 'AI Safety Evaluation', 'AI Response Quality Assessment', 'Structured Human Feedback']
+      },
+      {
+        category: 'Data & Annotation',
+        items: ['Data Annotation', 'Text Annotation', 'Image Annotation', 'Audio Annotation', 'Video Annotation', 'Transcription', 'Translation', 'Content Labeling', 'Classification', 'Search Relevance Evaluation', 'Data Quality Assessment']
       },
       {
         category: 'Programming Languages',
-        items: ['Java', 'C#', 'JavaScript', 'TypeScript', 'C++', 'C']
+        items: ['C#', 'JavaScript', 'TypeScript', 'Java', 'Python', 'SQL', 'C++', 'Rust', 'Go']
       },
       {
-        category: 'Database Technologies',
-        items: ['SQL Server', 'MongoDB', 'Database Design', 'Stored Procedures', 'Joins', 'Indexing Concepts', 'CRUD Operations', 'Data Modeling']
+        category: 'Frontend Development',
+        items: ['React', 'Angular', 'Next.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Redux', 'Responsive Web Design', 'Reusable Components', 'State Management']
       },
       {
-        category: 'AI & Machine Learning Evaluation',
-        items: ['Prompt Engineering', 'Chain-of-Thought Evaluation', 'Instruction Tuning', 'Rubric Validation', 'Adversarial Testing', 'Model Evaluation', 'LLM Quality Assessment', 'Search Relevance', 'Reasoning Validation', 'Competitive Programming Evaluation', 'Annotation Quality Assurance']
+        category: 'Backend Development',
+        items: ['Node.js', 'Express.js', 'ASP.NET', 'ASP.NET Core', '.NET', 'Spring Boot', 'REST API Development', 'API Integration', 'Authentication', 'Authorization', 'JWT', 'Business Logic', 'Middleware', 'Background Jobs', 'Service-Layer Architecture']
+      },
+      {
+        category: 'Databases',
+        items: ['Microsoft SQL Server', 'PostgreSQL', 'MongoDB', 'SQL', 'Relational Database Design', 'NoSQL Data Modeling', 'Query Optimization', 'Database Integration']
       },
       {
         category: 'Cloud & DevOps',
-        items: ['Microsoft Azure', 'Azure DevOps', 'Git', 'GitHub', 'CI/CD Pipelines', 'Agile Development', 'Sprint Planning']
+        items: ['Microsoft Azure', 'Azure DevOps', 'CI/CD', 'Git', 'GitHub', 'Vercel', 'Netlify', 'Cloud Deployment', 'Agile/Scrum']
       }
     ],
     experience: [
+      {
+        title: 'Freelance AI Trainer & Full-Stack Developer',
+        company: 'Outlier',
+        period: 'January 2024 – Present',
+        achievements: [
+          'Evaluated AI-generated responses against detailed task requirements, evaluation rubrics, and quality standards to improve model accuracy, reasoning quality, and instruction following.',
+          'Performed response ranking, preference evaluation, and structured feedback to identify the strongest outputs based on defined criteria.',
+          'Reviewed generated code for correctness, logic, efficiency, robustness, maintainability, and edge cases across multiple programming languages and domains.',
+          'Conducted adversarial testing, factuality checks, hallucination detection, and edge-case analysis to assess AI safety and reliability.',
+          'Worked across text, image, audio, and video annotation tasks including transcription, translation, content labeling, classification, and search relevance evaluation.'
+        ]
+      },
       {
         title: 'Software Engineer',
         company: 'Capgemini',
         period: 'October 2024 – December 2025',
         achievements: [
-          'Built and maintained backend services using ASP.NET and .NET Core for enterprise applications.',
-          'Developed RESTful APIs, implemented business logic, and handled authentication and exception workflows.',
-          'Worked with SQL Server for query optimization, stored procedures, and efficient database integration.',
-          'Contributed to Angular and React UI development for dashboards, forms, data tables, and responsive layouts.',
-          'Collaborated in Agile Scrum teams using Azure DevOps, Git, pull requests, and branch management.'
+          'Developed and maintained backend services using C#, ASP.NET, ASP.NET Core, and .NET Core for enterprise applications.',
+          'Implemented RESTful APIs, service-layer components, and business logic while integrating them with frontend applications and database systems.',
+          'Worked extensively with Microsoft SQL Server to design and optimize queries, support database interactions, and improve application performance.',
+          'Contributed to Angular and React-based frontend applications for UI screens, dashboards, data presentation, and API communication.',
+          'Collaborated within Agile teams using Azure DevOps, Git, CI/CD pipelines, code reviews, and sprint-based development workflows.'
         ]
       },
       {
-        title: 'Freelance AI Trainer',
-        company: 'Outlier',
-        period: 'January 2024 – Present',
-        achievements: [
-          'Evaluated LLM responses for accuracy, completeness, reasoning, safety, helpfulness, and consistency.',
-          'Improved model performance through instruction tuning, rubric validation, and adversarial testing.',
-          'Designed and validated programming tasks, edge cases, and hidden test cases for competitive programming evaluation.',
-          'Performed annotation work across text, image, audio, and video while maintaining quality standards.'
-        ]
-      },
-      {
-        title: 'Web Development Intern',
+        title: 'Web Development & Digital Marketing Intern',
         company: 'RG-VP Web Solutions',
         period: 'June 2023 – December 2023',
         achievements: [
-          'Developed responsive websites using HTML, CSS, and JavaScript with SEO-oriented implementation.',
-          'Built landing pages, navigation components, and contact forms while improving UI quality.',
-          'Applied semantic HTML, meta tags, and image optimization techniques for better performance.'
+          'Designed and developed responsive websites using HTML, CSS, JavaScript, PHP, React, Angular, and Bootstrap.',
+          'Improved website usability and presentation by implementing reusable frontend components, responsive layouts, and browser-compatible UI changes.',
+          'Applied basic on-page SEO practices including page titles, meta descriptions, heading structures, internal linking, and content optimization for search visibility.',
+          'Supported digital marketing and content optimization efforts to improve online presence and discoverability.'
         ]
       },
       {
@@ -121,12 +131,26 @@ export class PortfolioService {
         company: 'Persistent Systems',
         period: 'June 2023 – August 2023',
         achievements: [
-          'Completed intensive training in full-stack development, backend fundamentals, frontend development, and database concepts.',
-          'Worked with Agile practices and Git workflows while building practice applications that demonstrated end-to-end development skills.'
+          'Received practical training in full-stack web development, version control, debugging, and modern software development workflows.',
+          'Built foundational knowledge of frontend and backend development, database concepts, and collaborative engineering practices.',
+          'Strengthened understanding of software engineering fundamentals through hands-on exercises and structured development activities.'
         ]
       }
     ],
-    projects: [],
+    projects: [
+      {
+        title: 'OneNest — Personal All-in-One Organizer',
+        description: 'A full-stack productivity platform designed to manage notes, reminders, calendars, expenses, budgets, investments, bills, and shopping tasks within a single application.',
+        technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT'],
+        link: 'https://one-nest.vercel.app'
+      },
+      {
+        title: 'WeCare — Community Support Platform',
+        description: 'A community-oriented full-stack platform that connects donors and receivers, enabling donation listings, profiles, OTP verification, and user dashboards for support workflows.',
+        technologies: ['React', 'Redux', 'Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT'],
+        link: 'https://wecare-demo.vercel.app'
+      }
+    ],
     certifications: [
       {
         title: 'Microsoft Certified: AZ-204 – Developing Solutions for Microsoft Azure',
@@ -142,8 +166,8 @@ export class PortfolioService {
       }
     ],
     education: {
-      degree: 'Bachelor of Technology (B.Tech.) – Information Technology',
-      institution: 'G H Raisoni College of Engineering',
+      degree: 'Bachelor of Technology — Information Technology',
+      institution: 'G H Raisoni College of Engineering, Nagpur',
       year: '2024'
     }
   });
